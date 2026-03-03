@@ -1,20 +1,11 @@
-import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
+import { defineConfig } from
+  "astro/config";
+import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import icon from "astro-icon";
 
 // https://astro.build/config
-export default defineConfig({
-  site: "https://opticabellezavision.com",
-  integrations: [
-    tailwind(),
-    mdx(),
-    sitemap(),
-    icon()
-  ],
-  server: {
-    host: true,
-    port: 4321
-  }
-});
+export default defineConfig({  site: "https://astroship.web3templates.com",  
+                             integrations: [mdx(), sitemap(), icon()],  vite: {    plugins: [tailwindcss()],  },  
+                             server: {    host: true,    port: 4321  }});
