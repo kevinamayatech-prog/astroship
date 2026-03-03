@@ -8,4 +8,9 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({  site: "https://astroship.web3templates.com",  
                              integrations: [mdx(), sitemap(), icon()],  vite: {    plugins: [tailwindcss()],  },  
-                             server: {    host: true,    port: 4321  }});
+                             server: {    
+                               host: true,    
+                               port: 4321
+                               allowedHosts: ["opticabellezavision.com"]
+                             }
+                            });
